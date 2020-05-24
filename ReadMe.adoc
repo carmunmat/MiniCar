@@ -1,0 +1,99 @@
+:Author: carlosmunozmatas
+:Email: carlos.munozmatas@gmail.com
+:Date: 21/07/2018
+:Revision: version#
+:License: Public Domain
+
+= Project: {Project}
+
+This project is about a car controlled by app smartphone-app.
+
+It is powered by an USB powerbank (5V)
+
+Controlled by an Arduino NANO
+
+In the phone, the installed app is Bluetooth Electronics from keuwlsoft:
+https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth
+You can import the control panel into the app from the text file "minicar.kwl"
+
+Schematics: Minicar_schematics.png
+
+
+== Step 1: Installation
+Please describe the steps to install this project.
+
+For example:
+
+1. Open this file
+2. Edit as you like
+3. Release to the World!
+
+== Step 2: Assemble the circuit
+
+Assemble the circuit following the diagram layout.png attached to the sketch
+
+Arduino UNO pinning:
+D0 -  Rx
+D1 -  Tx
+D2 -  RxBT, Bluetooth connection
+D3 -  TxBT, Bluetooth connection
+D4 -  free
+D5 -  free
+D6 -  ENA
+D7 -  in1
+D8 -  in2
+D9 -  in3
+D10 - in4
+D11 - ENB
+D12 - free
+D13 - free
+
+
+== Step 3: Load the code
+
+Upload the code contained in this sketch on to your board
+
+=== Folder structure
+
+....
+ sketch123                => Arduino sketch folder
+  ├── sketch123.ino       => main Arduino file
+  ├── schematics.png      => (optional) an image of the required schematics
+  ├── layout.png          => (optional) an image of the layout
+  └── ReadMe.adoc         => this file
+....
+
+=== License
+This project is released under a {License} License.
+
+=== Contributing
+To contribute to this project please contact carlosmunozmatas <carlos.munozmatas@gmail.com>
+
+=== BOM
+Add the bill of the materials you need for this project.
+
+|===
+| ID | Part name      | Part number | Quantity
+| R1 | 10k Resistor   | 1234-abcd   | 10       
+| L1 | Red LED        | 2345-asdf   | 5        
+| A1 | Arduino Zero   | ABX00066    | 1        
+|===
+
+
+=== Help
+
+The motor controller L298N is shown in the picture (L298N block diagram). 
+It controls a DC motor as follows:
+The Input 1 and Input 2 pins are used for controlling the rotation direction of the motor A, 
+and the inputs 3 and 4 for the motor B. Using these pins we actually control the switches of 
+the H-Bridge inside the L298N IC. If input 1 is LOW and input 2 is HIGH the motor will move 
+forward, and vice versa, if input 1 is HIGH and input 2 is LOW the motor will move backward. 
+In case both inputs are same, either LOW or HIGH the motor will stop. The same applies for the 
+inputs 3 and 4 and the motor B.
+
+The bluetooth commands:
+The bluetooth connection works sending text strings in both directions, from the ARduino to the app and backwards. 
+
+
+
+

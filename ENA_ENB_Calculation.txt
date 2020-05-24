@@ -1,0 +1,24 @@
+
+Pad configuration:  .Car configuration:
+      -y            .--------------
+      |             .|   front   |
+      |             .|           |
+-x ------- +x       .|           |
+      |             .|           |
+      |             .| ENB   ENA |
+      +y            .|   back    |
+                    .-------------
+
+ENA = -0.5*x - 0.5*y
+ENB = +0.5*x - 0.5*y
+
+
+   PadX  PadY  ENB   ENA
+1) 254   254   -254  -127
+2) 0     254   -127  -127
+3) 254   0     127     0
+4) -254  254   -254  -127
+
+ENA = a*x + b*y
+ENB = c*x + d*y
+
