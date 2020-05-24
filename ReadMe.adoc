@@ -17,6 +17,7 @@ https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth
 You can import the control panel into the app from the text file "minicar.kwl"
 
 Schematics: Minicar_schematics.png
+Easyeda link: https://easyeda.com/carlos.munozmatas/bt-car-pcb_copy
 
 
 == Step 1: Installation
